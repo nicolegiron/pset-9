@@ -12,9 +12,21 @@ public class Exercises {
 	}
 
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
-		// write your code here
-
-		return null;	// default return value to ensure compilation
+		if (values == null || values.size() < n || n < 1) {
+			ArrayList empty = new ArrayList();
+ 			return empty;
+ 		} else {
+			ArrayList newArray = new ArrayList(n*2);
+ 			int x = n;
+ 			for(int i = 0; i < n; i++) {
+ 				newArray.add(values.get(i));
+ 			}
+ 			for(int i = values.size()-n; i < values.size(); i++) {
+ 				newArray.add(values.get(i));
+ 				x++;
+ 			}
+ 			return newArray;
+ 		}
 	}
 
 	public int difference(ArrayList<Integer> numbers) {
