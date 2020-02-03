@@ -126,12 +126,12 @@ public class Exercises {
 	}
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
-		if (numbers == null || numbers.length < 3) {
+		if (numbers == null || numbers.size() < 3) {
 			return false;
 		} else {
 			int correct = 0;
-			for(int i = 0; i < numbers.length-2; i++) {
-				if((numbers[i] % 2 == 0 && numbers[i+1] % 2 == 0 && numbers[i+2] % 2 == 0) || numbers[i] % 2 == 1 && numbers[i+1] % 2 == 1 && numbers[i+2] % 2 == 1) {
+			for(int i = 0; i < numbers.size()-2; i++) {
+				if((numbers.get(i) % 2 == 0 && numbers.get(i+1) % 2 == 0 && numbers.get(i+2) % 2 == 0) || numbers.get(i) % 2 == 1 && numbers.get(i+1) % 2 == 1 && numbers.get(i+2) % 2 == 1) {
 					correct += 1;
 				}
 			}
