@@ -144,18 +144,18 @@ public class Exercises {
 	}
 
 	public boolean balance(ArrayList<Integer> numbers) {
-		if (numbers == null || numbers.length < 2) {
+		if (numbers == null || numbers.size() < 2) {
 			return false;
 		} else {
 			int left = 0;
 			int right = 0;
-			for(int x = 0; x < numbers.length; x++) {
-				right += numbers[x];
+			for(int x = 0; x < numbers.size(); x++) {
+				right += numbers.get(x);
 			}
-			for(int i = 0; i < numbers.length-1; i++) {
+			for(int i = 0; i < numbers.size()-1; i++) {
 				if(left != right) {
-					left += numbers[i];
-					right -= numbers[i];
+					left += numbers.get(i);
+					right -= numbers.get(i);
 			    }
 			}
 		return left==right;
