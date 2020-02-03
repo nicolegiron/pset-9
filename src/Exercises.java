@@ -108,12 +108,12 @@ public class Exercises {
 	}
 
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
-		if (numbers == null || numbers.length < 1) {
+		if (numbers == null || numbers.size() < 1) {
 			return false;
 		} else {
 			int correct = 0;
-			for(int i = 0; i < numbers.length-3; i++) {
-				if((numbers[i] == x && numbers[i+2] == x) || (numbers[i] == x && numbers[i+3] == x)) {
+			for(int i = 0; i < numbers.size()-3; i++) {
+				if((numbers.get(i) == x && numbers.get(i+2) == x) || (numbers.get(i) == x && numbers.get(i+3) == x)) {
 					correct += 1;
 				}
 			}
