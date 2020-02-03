@@ -168,12 +168,12 @@ public class Exercises {
 		} else {
 			int clumps = 0;
 			boolean isClump = false;
-		  for(int i = 0; i < values.length - 1; i++) {
+		  for(int i = 0; i < values.size() - 1; i++) {
 			  if (isClump) {
-				  if(!values[i].equals(values[i+1])) {
+				  if(!values.get(i).equals(values.get(i+1))) {
 					  isClump = false;
 				  }
-			  } else if (values[i].equals(values[i+1])) {
+			  } else if (values.get(i).equals(values.get(i+1))) {
 				  isClump = true;
 				  clumps++;
 			  }
