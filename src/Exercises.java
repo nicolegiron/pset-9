@@ -108,9 +108,21 @@ public class Exercises {
 	}
 
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
-		// write your code here
-
-		return false;	// default return value to ensure compilation
+		if (numbers == null || numbers.length < 1) {
+			return false;
+		} else {
+			int correct = 0;
+			for(int i = 0; i < numbers.length-3; i++) {
+				if((numbers[i] == x && numbers[i+2] == x) || (numbers[i] == x && numbers[i+3] == x)) {
+					correct += 1;
+				}
+			}
+			if(correct > 1) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 	}
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
