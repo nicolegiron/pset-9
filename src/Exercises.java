@@ -73,23 +73,23 @@ public class Exercises {
 	}
 
 	public ArrayList<String> middle(ArrayList<String> values) {
-		String[] empty = new String[0];
-		if (values == null || values.length < 3 || values.length % 2 == 0) {
+		ArrayList<String> empty = new ArrayList<String>();
+		if (values == null || values.size() < 3 || values.size() % 2 == 0) {
 			return empty;
 		} else {
-			for(int i = 0; i < values.length; i++) {
-				if(values[i] == null) {
+			for(int i = 0; i < values.size(); i++) {
+				if(values.get(i) == null) {
 					return empty;
 				}
 			}
-			int middleInt = (values.length-1);
-			String first = values[middleInt/2-1];
-			String middle = values[middleInt/2];
-			String last = values[middleInt/2+1];
-			String[] newArray = new String[3];
-			newArray[0] = first;
-			newArray[1] = middle;
-			newArray[2] = last;
+			int middleInt = values.size()-1;
+			String first = values.get(middleInt/2-1);
+			String middle = values.get(middleInt/2);
+			String last = values.get(middleInt/2+1);
+			ArrayList<String> newArray = new ArrayList<String>(3);
+			newArray.add(first);
+			newArray.add(middle);
+			newArray.add(last);
 			return newArray;
 		}
 	}
